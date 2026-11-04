@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyrule Films | Contacto </title>
+
+    <!-- Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+
+    <!-- CSS (siempre DESPUÉS de Bootstrap) -->
+    <link href="../css/estilos.css" rel="stylesheet">
+
+    <!-- Mapa -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+</head>
+<body>
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg bg-granate" data-bs-theme="dark">            
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../img/Logo_Crema.png" alt="Logo hyrule films" width="30" height="24" class="d-inline-block align-text-top">
+                    <span class="marca fst-italic fs-3">Hyrule Films</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link rounded-pill px-3 "  href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link rounded-pill px-3" href="galeria.html">Galería</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link rounded-pill px-3 active" aria-current="page" href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>        
+        </nav>
+    </header>
+
+
+    <main>
+        <div class="container mt-4 d-none d-lg-block">
+            <div class="position-relative rounded-4 overflow-hidden">
+                <img src="../img/Brindis.jpg" class="w-100 cabecera-foto object-fit-cover" alt="Novios brindando con champán">
+                <p class="position-absolute bottom-0 start-0 p-5 mb-0 carrusel-titulo display-1">
+                    Hablemos <em class="marca text-lowercase">de</em> vuestro día
+                </p>
+            </div>
+        </div>
+        <section class="container text-center py-5">
+            <h1 class="titulo-elegante display-3">Contacto</h1>
+            <p class="col-lg-6 mx-auto fs-5">Contadnos la fecha y el lugar y os responderemos en menos de 48 horas con disponibilidad y presupuesto.</p>
+        </section>
+
+        <section class="container pb-5">
+            <div class="row">
+                <div class="col-12 col-lg-7 mb-4">
+                    <form class="bg-white border rounded-4 p-4 p-lg-5">
+                        <h2 class="titulo-elegante fst-italic mb-4">Rellenad el formulario</h2>
+                        <div class="row">
+                            <div class="col-12 col-lg-6 mb-3">
+                                <label for="nombre" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Lucía"
+                                    minlength="3" maxlength="40"
+                                    pattern="[A-Za-zÁÉÍÓÚáéíóúÑñÜü ]{3,40}"
+                                    title="Solo letras y espacios, entre 3 y 40 caracteres">
+                                    <div class="form-text">Solo letras y espacios · 3 a 40</div>
+                            </div>
+                            
+                            <div class="col-12 col-lg-6 mb-3">
+                                <label for="apellidos" class="form-label">Apellidos</label>
+                                <input type="text" class="form-control" id="apellidos" name="apellidos" placeholder="Ruíz Campos"
+                                    minlength="4" maxlength="60"
+                                    pattern="[A-Za-zÁÉÍÓÚáéíóúÑñÜü ]{4,60}"
+                                    title="Solo letras y espacios, entre 4 y 60 caracteres">
+                                    <div class="form-text">Solo letras y espacios · 4 a 60</div>
+                            </div>
+                            <div class="col-12 col-lg-6 mb-3">
+                                <label for="email" class="form-label">Correo electrónico</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="usuario@dominio.com" required
+                                    pattern="[^@\s]+@[^@\s]+\.[a-zA-Z]{2,}"
+                                    title="Formato: usuario@dominio.com">
+                                <div class="form-text">Formato xxxx@xxxxx.xx</div>
+
+                            </div>
+                            <div class="col-12 col-lg-6 mb-3">
+                                <label for="telefono" class="form-label">Teléfono</label>
+                                <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="600 000 000" required
+                                    maxlength="9" pattern="[0-9]{9}"
+                                    title="9 números, sin espacios">
+                                <div class="form-text">9 números</div>
+
+                            </div>
+                            <div class="mb-3">
+                                <label for="comentarios" class="form-label">Comentarios</label>
+                                <textarea class="form-control" id="comentarios" name="comentarios" rows="4"></textarea>
+                            </div>
+                        </div>
+                        <button class="btn btn-granate rounded-pill me-2" type="submit">Enviar</button>
+                        <button class="btn btn-outline-dark rounded-pill" type="reset">Limpiar</button>
+                    </form>
+                </div>
+                        
+                    
+
+                <div class="col-12 col-lg-5 mb.4">
+                    <div id="mapa" class="rounded-4 border"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="bg-granate text-light py-5" data-bs-theme="dark">
+    <div class="container text-center">
+        <div class="row">
+            <!-- Columna 1:la empresa y el aviso legal -->
+            <div class="col-12 col-lg-4">
+                <h2 class="marca fs-4">Hyrule Films</h2>
+                <p>Productora audiovisual de bodas</p>
+                <ul class="list-unstyled">
+                    <li>600989878</li>
+                    <li>Carmona, Sevilla.</li>
+                    <li>hyrulefilms@gmail.com</li>
+                    <li><a href="#" class="text-light" data-bs-toggle="modal" data-bs-target="#avisoLegal">Aviso legal</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna 2:menú de navegación -->
+            <div class="col-12 col-lg-4">
+                <h2 class="marca fs-4">Navegación</h2>
+                <ul class="list-unstyled">
+                    <li><a class="nav-link" href="../index.html">Inicio</a></li>
+                    <li><a class="nav-link" href="galeria.html">Galería</a></li>
+                    <li><a class="nav-link" href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna 3:redes sociales -->
+            <div class="col-12 col-lg-4">
+                <h2 class="marca fs-4">Redes sociales</h2>
+                <a href="https://www.instagram.com" target="_blank" aria-label="Instagram" class="text-light text-decoration-none fs-3 mx-2">
+                    <i class="bi bi-instagram"></i>
+                </a>
+                <a href="https://www.tiktok.com" target="_blank" aria-label="TikTok" class="text-light text-decoration-none fs-3 mx-2">
+                    <i class="bi bi-tiktok"></i>
+                </a>
+                <a href="https://www.youtube.com" target="_blank" aria-label="YouTube" class="text-light text-decoration-none fs-3 mx-2">
+                    <i class="bi bi-youtube"></i>
+                </a>
+                <a href="https://www.facebook.com" target="_blank" aria-label="Facebook" class="text-light text-decoration-none fs-3 mx-2">
+                    <i class="bi bi-facebook"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <p class="border-top pt-4 mt-4 mb-0 small">© 2026 Hyrule Films · Todos los derechos reservados</p>
+    </div>
+</footer>
+
+<!-- Ventana del aviso legal -->
+<div class="modal fade" id="avisoLegal" tabindex="-1" role="dialog" aria-labelledby="avisoLegalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title titulo-elegante fs-3" id="avisoLegalLabel">Aviso legal</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Titular:</strong> Hyrule Films S.L. · CIF B00000000 · Carmona, Sevilla.</p>
+                <p><strong>Contacto:</strong> hyrulefilms@gmail.com · 600 989 878</p>
+                <p><strong>Propiedad intelectual:</strong> Los textos, fotografías y vídeos de esta web pertenecen a Hyrule Films o a sus autores, y no pueden reproducirse sin autorización.</p>
+                <p><strong>Protección de datos:</strong> Los datos enviados a través del formulario de contacto se usarán solo para responder a vuestra consulta y no se cederán a terceros.</p>
+                <p class="small text-body-secondary mb-0">Web creada como trabajo final del curso. Empresa ficticia.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-granate rounded-pill" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+
+    <!--MAPA-->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="../js/contacto.js"></script>
+</body>
+</html> 

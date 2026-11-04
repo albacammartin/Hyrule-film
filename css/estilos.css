@@ -1,0 +1,209 @@
+/* ------------------------
+  VARIABLES DE COLOR
+  La paleta de la marca. Se usan con var(--nombre).
+  Si cambias un color aquí, cambia en toda la web.
+  ------------------------ */
+:root {
+  --granate: #4a1622;
+  --rosa-claro: #f8d9d9;
+  --rosa: #e7c3c3;
+  --rosa-medio: #d49a9f;
+  --crema: #f6eee6;
+  --beige: #ebddd0;
+}
+
+
+/* ------------------------
+  GENERAL
+  Fondo, fuente y color de texto de toda la página.
+  ------------------------ */
+body {
+  background-color: var(--crema);
+  font-family: "Jost", sans-serif;
+  color: #2b1015;
+}
+
+
+/* ------------------------
+  FONDOS
+  Colores de la marca que Bootstrap no tiene.
+  ------------------------ */
+
+/* Fondo granate: barra de navegación y footer */
+.bg-granate {
+  background-color: var(--granate);
+}
+
+/* Fondo rosa: franja de la sección de paquetes */
+.bg-rosa {
+  background-color: var(--rosa-claro);
+}
+
+/* Fondo crema: recuadro del contenido de las pestañas */
+.bg-crema {
+  background-color: var(--crema);
+}
+
+
+/* ------------------------
+  TIPOGRAFÍAS
+  Fuentes de Google Fonts para los títulos.
+  ------------------------ */
+
+/* Títulos grandes en Anton y mayúsculas (ej: "ELEGID PAQUETE") */
+.titulo-grande {
+  font-family: "Anton", sans-serif;
+  text-transform: uppercase;
+  color: var(--granate);
+}
+
+/* Títulos elegantes en Cormorant (ej: "Contamos historias", títulos de las cards) */
+.titulo-elegante {
+  font-family: "Cormorant Garamond", serif;
+  color: var(--granate);
+}
+
+/* Palabra en cursiva dentro de un título grande (ej: "vuestro") */
+.nav-italica {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  text-transform: lowercase;
+  color: var(--granate);
+}
+
+/* Nombre "Hyrule Films" en la barra de navegación */
+.marca {
+  font-family: "Cormorant Garamond", serif;
+}
+
+
+/* ------------------------
+  MENÚ DE NAVEGACIÓN
+  ------------------------ */
+
+/* Píldora rosa en la página en la que estás */
+.navbar-nav .nav-link.active {
+  background-color: var(--rosa);
+  color: var(--granate);
+}
+
+
+/* ------------------------
+  CARRUSEL
+  ------------------------ */
+
+/* Misma altura en todas las fotos, oscurecidas para que el texto se lea */
+.carrusel-img {
+  height: 550px;
+  filter: brightness(0.7);
+}
+
+/* Título de cada foto: Anton, mayúsculas y rosa */
+.carrusel-titulo {
+  font-family: "Anton", sans-serif;
+  text-transform: uppercase;
+  color: var(--rosa);
+}
+
+/* Subtítulo de cada foto: Cormorant (la cursiva la pone Bootstrap con fst-italic) */
+.carrusel-subtitulo {
+  font-family: "Cormorant Garamond", serif;
+}
+
+
+/* ------------------------
+  CARDS
+  ------------------------ */
+
+/* Misma altura en las fotos de las 4 cards */
+.card-foto {
+  height: 220px;
+}
+
+
+/* ------------------------
+  BOTONES
+  ------------------------ */
+
+/* Botón granate de la marca */
+.btn-granate {
+  background-color: var(--granate);
+  color: var(--crema);
+}
+
+/* Al pasar el ratón por encima: cambia a rosa */
+.btn-granate:hover {
+  background-color: var(--rosa-medio);
+  color: var(--granate);
+}
+
+
+/* ------------------------
+  PESTAÑAS (sección de paquetes)
+  ------------------------ */
+
+/* Pestañas no seleccionadas: rosa oscuro */
+.nav-tabs .nav-link {
+  background-color: var(--rosa-medio);
+  color: var(--granate);
+}
+
+/* Pestaña seleccionada: crema, como el recuadro del contenido */
+.nav-tabs .nav-link.active {
+  background-color: var(--crema);
+  color: var(--granate);
+}
+
+/* ------------------------
+  GALERÍA
+  ------------------------ */
+
+/* Misma altura en todas las fotos de la galería */
+.galeria-foto {
+  height: 280px;
+  will-change: transform; /*prepara al navegador para que las fotos se muevan*/
+}
+
+/* Misma altura en todas las fotos, y transición suave para el efecto */
+.galeria-foto {
+  height: 280px;
+  transition: transform 0.4s, filter 0.4s;
+}
+
+/* Al pasar el ratón: zoom y oscurecido */
+.galeria-foto:hover {
+  transform: scale(1.1);
+  filter: brightness(0.75);
+}
+
+/* ------------------------
+  Contacto
+  ------------------------ */
+
+.cabecera-foto{
+  height: 400px;
+  filter: brightness(0.6);
+}
+
+/* ------------------------
+  FORMULARIO
+  ------------------------- */
+
+/* Campos con fondo crema y borde rosa */
+.form-control {
+    background-color: var(--crema);
+    border-color: var(--rosa-medio);
+}
+
+/* Títulos de los campos en granate y algo más gruesos */
+.form-label {
+    color: var(--granate);
+    font-weight: 500;
+}
+
+
+/* Altura del mapa: sin ella, el mapa mide 0 y no se ve */
+#mapa {
+    height: 100%;
+    min-height: 400px;
+}
